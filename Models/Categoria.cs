@@ -14,5 +14,13 @@ namespace ControleVendas.Models
         [MinLength(5, ErrorMessage = "O nome deve conter no minimo 5 caracteres")]
         [DisplayName("Nome da Categoria")]
         public string? Nome { get; set; }
+
+        [ScaffoldColumn(false)]
+        [DataType(DataType.DateTime)]
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
+
+        [ScaffoldColumn(false)]
+        [DataType(DataType.DateTime)]
+        public DateTime UpdatedAt { get; set; } = DateTime.Now;
     }
 }
